@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-04T16:11:08+0100
+%% Last-Updated: 2019-02-05T14:46:15+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Report-no: ***
 \newif\ifarxiv
@@ -680,8 +680,128 @@ Rota \citey[\sect~1]{barnabeietal1985}.
 In this essay (in the etymological sense of this term, implying
 tentativeness and a want of finish) we present an algebra of geometric
 objects in the spirit of \gm\ and Peano, but with additional features
-coming from the calculus of exterior and interior objects
+coming from the calculus of objects with exterior and interior properties
 \citep{veblenetal1932,schoutenetal1940,schouten1951_r1989,burke1983,burke1985_r1987,burke1995,bossavit1994_r2002,bossavit2003b}.
+The algebra we present differs from geometric algebra
+\citep{dorstetal2007,li2008}, which relies on a metric. It also differs
+from the calculus of vectors and covectors, although it's tightly connected
+to it.
+
+Our presentation is restricted to three- and two-dimensional space, but it
+may be probably generalized to any number of dimensions. Our focus is not
+on formal definitions and theorem, but rather on a visual construction of
+the algebra.
+
+\section{Primitives}
+\label{sec:primitives}
+
+Our base space is \emph{affine} space in three-dimensions. This means that
+we have a primitive notion of \emph{parallelism}, but no vectorial or
+metric notions such as origin, distance, or angle. Parallelism allows us to
+speak about the following notions, which are central to our algebra; let
+$\yN=3$:
+
+\subsection{$\yr$-flats}
+\label{sec:flats}
+
+$\yr$-dimensional \emph{flats} or $\yr$-flats: a 1-flat is a straight line,
+a 2-flat a plane, the 3-flat is the whole space, and a 0-flat is a point.
+Two flats can be parallel, incident, or skew \mynote{example pictures}.
+Every $\yr$-flat is itself an affine space of $\yr$ dimensions.
+
+\subsection{$\yr$-coflats}
+\label{sec:coflats}
+
+An $\yr$-dimensional \emph{co-flat} or $\yr$-coflat, is the set of
+$\yr$-flats parallel to a given $\yr$-flat. For example, given a straight
+line, the set of lines parallel to it is a 1-flat. Every $\yr$-coflat is
+itself an affine space of $\yN-\yr$ dimensions. Every $\yr$-flat determines
+a unique $\yr$-coflat, but not vice versa.
+
+We can always set up a non-canonical identification between an $\yr$-coflat
+and an $(\yN-\yr)$-flat. Consider for example a line. The set of lines
+parallel to it constitutes a 1-coflat or co-line. Select a plane that
+intersects this line without containing it. Each line parallel to the given
+one passes through one point of this plane, in a one-one correspondence.
+The points of this plane thus correspond to the points of the 1-coflat
+determined by the given line. Every plane that intersect the original line
+has this isomorphism with the 1-coflat; this is why this identification is
+non-canonical. In a similar fashion, if we select a plane, the set of
+planes parallel to it constitute a 2-coflat or co-plane. This set is an
+affine space of 1 dimension. Choose a line intersecting the original plane
+in one point. Each point on this line selects a unique plane parallel to
+the original one, and thus selects one point on the 2-coflat.
+
+
+\subsection{$\yr$-extensions}
+\label{sec:extensions}
+
+Given an $\yr$-flat, we can select a $\yr$-dimensional region of it (not
+necessarily simply connected) delimited by a closed $(\yr-1)$-dimensional
+manifold. For example, a 2-dimensional region bounded by closed curve on a
+plane \mynote{add example pictures}. The absence of a metric doesn't allow
+us to speak of the exact extension of this region -- its length, or area,
+or volume. But parallelism allows us to give a numerical value to the
+\emph{ratio} of the extensions of two different regions on the same
+$\yr$-flat or on parallel $\yr$-flats. In particular, it allows us to say
+whether two such regions have the same extension. An $\yr$-extension is the
+equivalence class of the regions having the same extension. It can be
+visualized as a region on an $\yr$-flat, but the location and shape of this
+region don't matter, as long as we preserve its extension.
+
+We define a 0-extension as a positive real number.
+
+\mynote{Pictures}
+
+\subsection{$\yr$-coextensions}
+\label{sec:coextensions}
+
+
+Now consider an $\yr$-coflat. It's an affine space, so we can consider an
+$(\yN-\yr)$-dimensional region on it and an $(\yN-\yr)$-extension. This is
+called an $\yr$-coextension.
+
+Coextensions can be visualized in two ways. Consider a 1-coextension. We
+select a line, and this determines a co-line. We can visualize this co-line
+as a plane intersecting the original line. A 1-coextension is visualized as
+a closed 2-dimensional region on this plane, with the understanding that
+its location and shape don't matter, as long as its area is the same. Thus
+a 1-coextension can be identified with a 2-dimensional flat region
+intersecting a given line \mynote{picture}. On the other hand, consider the
+abstract 2-dimensional region in the co-line. This region has a boundary;
+the points of this boundary represent lines parallel to the original one.
+We can thus visualize a 1-coextension as a tube formed by parallel lines,
+with the understanding that the cross-sectional shape of the tube doesn't
+matter, as long as its cross-sectional area with respect to any plane
+cutting it, remains the same.
+
+Proceeding in a similar way, we can visualize:
+\begin{itemize}
+\item a 2-coextension as a segment on a line intersecting a given plane, or
+  as two parallel planes;
+\item a 0-coextension as a 3-dimensional region of space, with the
+  understanding that its shape and location don't matter, as long as its
+  volume is the same;
+\item a 3-coextension is defined as a positive real number.
+\end{itemize}
+
+\mynote{Pictures}
+
+\subsection{Orientations}
+\label{sec:orientations}
+
+
+
+
+
+
+Our primitive objects are point, line, plane, space. But we equip each of
+these with two characteristics: a \emph{weight} and an \emph{orientation}. Weight
+and orientation can each be of two kinds: \emph{inner}, that is, defined on the
+geometric object itself; or of \emph{outer} kind, that is, defined on the
+complement subspace of the object.
+
+
 
 \clearpage
 \hrule
@@ -745,8 +865,6 @@ these geometric objects has also a \emph{weight density} and an
 that is, defined on the geometric object itself; or of \emph{outer} kind,
 that is, defined on the complement subspace of the object.
 
-%\section{Primitives}
-%\label{sec:primitives}
 
 \section{Basic geometric objects and properties}
 \label{sec:basic_objects_properties}
@@ -831,7 +949,7 @@ $\yr$-planes.
 
 
 \subsection{Orientations}
-\label{sec:orientations}
+\label{sec:orientations2}
 
 It is easy to familiarize with the notion of orientation of a line, plane,
 volume. We can imagine to traverse a line with two points $A$, $B$ by going
