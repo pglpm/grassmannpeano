@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-10T10:48:14+0100
+%% Last-Updated: 2019-02-10T18:23:14+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Report-no: ***
 \newif\ifarxiv
@@ -666,7 +666,23 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 % %\setlength{\afterepigraphskip}{0pt}
 % \epigraph{\emph{text}}{source}
 
-\section{An algebra of geometric \mynote{affine?} objects}
+
+\mynote{Synopsis:
+  \begin{itemize}
+  \item Intro
+  \item Primitives (flats, weights, orientations)
+  \item Sum of points
+  \item Sum of lines and higher-dim objects
+  \item Product (join) of objects with inner weights
+  \item Product (meet) of objects with outer weights
+  \item Product between objects with inner and outer weights
+  \item Combination of all products into a non-associative one
+  \item Further discussion: non-necessity of forms etc
+  \end{itemize}
+}
+
+
+\section{An algebra of geometric objects}
 \label{sec:algebra_geometry}
 
 The idea of \enquote{a system of operations on geometric entities, and
@@ -686,6 +702,9 @@ The algebra we present differs from geometric algebra
 \citep{dorstetal2007,li2008}, which relies on a metric. It also differs
 from the calculus of vectors and covectors, although it's tightly connected
 to it.
+
+\mynote{Add discussion on Peano's educational view and on its failure in
+  current, overly complicated presentations}
 
 Our presentation is restricted to three- and two-dimensional space, but it
 may be probably generalized to any number of dimensions. Our focus is not
