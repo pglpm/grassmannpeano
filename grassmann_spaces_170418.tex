@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-10T18:26:57+0100
+%% Last-Updated: 2019-02-10T23:54:15+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Report-no: ***
 \newif\ifarxiv
@@ -686,31 +686,47 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \section{An algebra of geometric objects}
 \label{sec:algebra_geometry}
 
-The idea of \enquote{a system of operations on geometric entities, and
-  their consequences, analogous to those that algebra has on the numbers}
-\citep[Preface]{peano1888_t2000} is quite old. Peano traces it back to
-Leibniz. Its first consistent formulation is universally attributed to \gm\
-\citey{grassmann1844_r1878,grassmann1862}. His work, though, has been
-tragically undervalued to the present day, as lamented by Barnabei, Brini,
-Rota \citey[\sect~1]{barnabeietal1985}.
+The idea of a calculus analogous to \enquote{algebraic calculus, but in
+  which the entities on which the calculations are carried out are
+  geometric objects, instead of numbers} \citep[\chap~I, our
+transl.]{peano1888} is quite old. Peano traced it back to Leibniz. He also
+expressed the opinion that \enquote{before long this geometric calculus, or
+  something analogous, will replace methods currently adopted in higher
+  education} \citep[Prefazione, our transl.]{peano1888}.
 
-In this essay (in the etymological sense of this term, implying
-tentativeness and a want of finish) we present an algebra of geometric
-objects in the spirit of \gm\ and Peano, but with additional features
-coming from the calculus of objects with exterior and interior properties
+The first consistent formulation of such a calculus is universally
+attributed to \gm\ \citey{grassmann1844_r1878,grassmann1862}. Grassmann's
+work was undervalued and suffered a convoluted history, an outlook of which
+is given in the translator's notes of that work
+\citep{grassmann1844_t1995,grassmann1862_t2000} and in the introductory
+parts of several other works
+\citep{peano1888,barnabeietal1985,crapo2009,browne2012,vargas2016}. His
+work is surely still undervalued today. We believe part of the reason to be
+the beautiful but also complicated and partially antagonist ways in which
+it has been developed and presented in the past fifty years \citep[examples
+are][]{hestenes1968,hestenesetal1984_r1987,barnabeietal1985,dorstetal2002,li2008,crapo2009,brinietal2011,dorstetal2011,gunn2011,browne2012,gonzalezcalvet2016,vargas2016}.
+These modern presentations would probably be too difficult to digest for
+high-school students.
+
+Yet the basic ideas behind Grassmann's work are quite intuitive and easy to
+visualize. They seem within the reach of a high-school student. And they
+are very powerful, allowing a student to state in a couple of lines
+geometric properties that would require more cumbersome formulae in
+analytic geometry.
+
+
+In this essay -- in the etymological sense of this term, implying
+tentativeness and a want of finish -- we present an algebra of geometric
+objects in the spirit of \gm\ and Peano. It differs from theirs and from
+modern treatments in some mathematical respects, such as the avoidance of
+metric notions and the inclusion of \enquote{exterior} and
+\enquote{interior} geometric properties
 \citep{veblenetal1932,schoutenetal1940,schouten1951_r1989,burke1983,burke1985_r1987,burke1995,bossavit1994_r2002,bossavit2003b}.
-The algebra we present differs from geometric algebra
-\citep{dorstetal2007,li2008}, which relies on a metric. It also differs
-from the calculus of vectors and covectors, although it's tightly connected
-to it.
+It also differs from modern treatments in the presentation style, which is
+mainly visual, not formal, and tries to avoid advanced concepts (duals,
+adjoints, matroids, and so on).
 
-\mynote{Add discussion on Peano's educational view and on its failure in
-  current, overly complicated presentations}
 
-Our presentation is restricted to three- and two-dimensional space, but it
-may be probably generalized to any number of dimensions. Our focus is not
-on formal definitions and theorem, but rather on a visual construction of
-the algebra.
 
 \section{Primitives}
 \label{sec:primitives}
