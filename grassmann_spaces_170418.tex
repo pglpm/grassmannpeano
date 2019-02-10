@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-10T23:54:15+0100
+%% Last-Updated: 2019-02-11T00:01:38+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Report-no: ***
 \newif\ifarxiv
@@ -354,7 +354,7 @@ citestyle=authoryear-comp,bibstyle=pglpm-authoryear,autopunct=false,sorting=ny,s
 \counterwithout{section}{chapter}
 \setsecnumformat{\upshape\csname the#1\endcsname\quad}
 \setsecheadstyle{\large\bfseries\sffamily%
-\raggedright}
+\centering}
 \setsubsecheadstyle{\bfseries\sffamily%
 \raggedright}
 %\setbeforesecskip{-1.5ex plus 1ex minus .2ex}% plus 1ex minus .2ex}
@@ -667,9 +667,10 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 % \epigraph{\emph{text}}{source}
 
 
-\mynote{Synopsis:
-  \begin{itemize}
+\mynote{\footnotesize Synopsis:
+  \begin{itemize}\tightlist
   \item Intro
+  \item Overview
   \item Primitives (flats, weights, orientations)
   \item Sum of points with inner weight
   \item Sum of points with outer weight
@@ -725,6 +726,11 @@ metric notions and the inclusion of \enquote{exterior} and
 It also differs from modern treatments in the presentation style, which is
 mainly visual, not formal, and tries to avoid advanced concepts (duals,
 adjoints, matroids, and so on).
+
+
+
+\section{Overview}
+\label{sec:overview}
 
 
 
