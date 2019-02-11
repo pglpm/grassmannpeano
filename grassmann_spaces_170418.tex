@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-11T20:23:47+0100
+%% Last-Updated: 2019-02-11T21:47:04+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -646,6 +646,8 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\ye}{e}
 \newcommand*{\yC}{C}
 \newcommand*{\yal}{\alpha}
+\makeatletter\newcommand*{\dextro}{\mathord{\,\includegraphics[totalheight=\heightof{@}]{screw-sense_posi.png}\,}}\makeatother
+\makeatletter\newcommand*{\laevo}{\mathord{\,\includegraphics[totalheight=\heightof{@}]{screw-sense_nega.png}\,}}\makeatother
 %%% Custom macros end @@@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -993,12 +995,24 @@ outer direction a \emph{scalar}.
 \subsection{Summary: zoology of geometric objects}
 \label{sec:summary_kinds_objects}
 
-We have seen that each point, line, plane, and space comes in four
-varieties: inner-weighted and inner-oriented, outer-weighted and
-outer-oriented, inner-weighted and outer-oriented, and outer-weighted and
-inner-oriented. We are thus dealing with sixteen different kinds of
-geometrical objects. Their visual representation is shown
-in figs~\ref{fig:points_lines}--\ref{fig:planes_space}.
+Each point, line, plane, and space comes thus in four varieties:
+inner-weighted and inner-oriented, outer-weighted and outer-oriented,
+inner-weighted and outer-oriented, and outer-weighted and inner-oriented.
+We are thus dealing with sixteen different kinds of geometrical objects.
+Their visual representation is shown in
+figs~\ref{fig:points_lines}--\ref{fig:planes_space}.
+
+We have mentioned that the inner weight and inner sense of a point can be
+jointly represented by a real number: its absolute value represents the
+weight, its sign the sense. The same is true for the outer weight and outer
+sense of space.
+
+In the cases of a point with inner weight and outer sense, and of
+space with outer weight and inner sense, the combination of weight and
+sense is represented by a non-negative number with a screw sense. It is
+convenient to consider negative numbers also in these cases, however: the
+presence of a negative sign simply indicates that the opposite screw sense
+should be considered; thus, for example, $-2\dextro \equiv 2\laevo$.
 
 
 
