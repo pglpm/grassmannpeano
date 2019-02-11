@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-11T10:23:33+0100
+%% Last-Updated: 2019-02-11T14:51:50+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -769,11 +769,198 @@ adjoints, matroids, and so on).
 \section{Primitives}
 \label{sec:primitives}
 
-Our base space is \emph{affine} space in three-dimensions. This means that
-we have a primitive notion of \emph{parallelism}, but no vectorial or
-metric notions such as origin, distance, or angle. Parallelism allows us to
-speak about the following notions, which are central to our algebra; let
-$\yN=3$:
+Our arena is three-dimensional space with its notion of \emph{parallelism}.
+We won't use vectorial or metric notions such as origin, distance, or
+angle; technically speaking we're considering an affine space. Denote the
+dimension of space by $\yN=3$.
+
+Our attention will focus on points, straight lines, planes, and the whole
+space. By \enquote{line} we'll always mean \enquote{straight line}. When we
+need to consider any one of these kinds of geometric objects, we'll call it
+a \emph{flat} (for obvious reasons). When we need to keep in mind the
+dimension of a flat, but the dimension is arbitrary, say $r$, we'll speak
+of an \emph{$r$-flat}. Thus a point is a $0$-flat, a line a $1$-flat, and
+so on.
+
+The calculus to be introduced allows us to express geometric statements
+about flats in a compact symbolic way. Some are very familiar statements of
+solid geometry. For example, that a line passes through two distinct
+points, or that a line is the intersection of two incident planes. Others are
+statements  about relations that are not encountered in pure solid
+geometry, but that we encounter in physics. For example, the statement that
+a point is the centre of mass of two point-masses located at two particular
+points. This second kind of statements makes our space  richer and has
+consequences for the first, more familiar kind of statements.
+
+To make the generalized kind of statements we need to enrich the geometric
+objects we're considering. To each geometric object of our four basic kinds
+we attribute two characteristics: a \emph{weight} and a \emph{sense}, and
+each of these can be of two possible types: \emph{inner} or \emph{outer}.
+For example, a point can have an inner weight and an inner sense, or
+an outer weight and an outer sense; or an inner weight and an outer
+sense; or, finally, an outer weight and an inner sense. A line
+can also comes in those four varieties; and so on. Weight comes in
+continuous degrees, whereas sense has only two possible values.
+
+\subsection{Inner weight}
+\label{sec:inner_weight}
+
+A point with an inner weight is very akin to a point-mass in physics. The
+inner weight can indeed be thought of as the mass (or charge, when combined
+with an inner sense as explained below) of the point and leads to similar
+statements and effects. We can freely choose a unit of mass, and it is
+possible to compare the mass of any two points. The weight of a point can
+thus be represented by a non-negative real number.
+
+The inner weight of a line can be thought of as a fixed length on the line
+itself.\mynote{Picture} Unlike the case of the points, a unit weight is not
+defined, but it is possible to compare two possible weights of the same
+line or of two parallel lines, but not of two lines that are not parallel
+(incident or skew). With such comparison we can determine the ratio of the
+two weights; it is a non-negative real number.\mynote{Possibly add
+  discussion of how such weights are compared. Picture}
+
+The inner weight of a plane can be thought of as a fixed area on the plane;
+but, if we visualize this area as the region within a closed curve on the
+plane, we must keep in mind that the shape of such region is
+unimportant.\mynote{Picture} A unit weight is not defined, but it is
+possible to compare and determine the ratio of the inner weights for the
+same plane or for two parallel planes, but not for two incident planes.
+
+The inner weight of the whole space can be thought of as a fixed volume;
+but, as in the case of the plane, if we visualize this volume as the region
+within a closed surface we must keep in mind that the shape of such surface
+is unimportant. Also in this case a unit weight is undefined but we can
+compare and determine the ratio of two possible weights.\mynote{Picture}
+
+
+\subsection{Inner sense}
+\label{sec:inner_sense}
+
+The inner sense of a point is simply a sign, \enquote{$+$} or
+\enquote{$-$}. The combination of inner weight and inner sense can thus be
+represented by a real number.
+
+The inner sense of a line can be visualized as the direction of motion by
+which we travel on the line, or of the direction of a flow happening on the
+line, both familiar concepts in physics. As for inner weight, it is
+possible to compare the senses of parallel lines, but not of non-parallel
+ones.
+
+The inner sense of a plane can be visualized as the direction of a circular
+motion taking place on the plane. We can compare the inner senses of
+parallel planes but not of non-parallel ones.
+
+The inner sense of space (sounds funny) can be visualized as the direction
+of a screw motion happening in space, again a familiar concept in physics.
+We usually speak of a right-handed and a left-handed sense, or of
+dextrogyre and laevogyre sense.
+
+\subsection{Outer properties}
+\label{sec:outer_properties}
+
+Before introducing outer weights and senses it may be useful to help
+intuition about what we mean with \enquote{outer}. Outer properties can be
+visualized in several ways; we discuss two, the first more pictorial, the
+second more technical.
+
+Consider a point, and imagine to displace it a little. The freedom we have
+in this displacement is three-dimensional. We can thus imagine a
+three-dimensional region surrounding the point, representing its possible
+displacements.
+
+Consider a line, and imagine to displace it a little keeping it parallel to
+itself. The freedom we have in this displacement is effectively
+two-dimensional: two displacements that can be obtained from each other by
+a displacement parallel to the line don't lead to observable differences.
+We can thus imagine a two-dimensional region surrounding the line,
+representing its possible effective displacements.
+
+For a plane, the same process lead us to visualize a one dimensional region
+extending on both sides of the plane.
+
+For the space there is no effective displacement: the region to visualize
+would be zero-dimensional.
+
+The \enquote{outer region} of an $r$-flat has therefore dimension $N-r$.
+
+\medskip
+
+A more technical way of visualizing outer properties is in terms of
+equivalence classes. For this, let's first agree to extend the meaning of
+\enquote{parallel} by saying that every point is by definition parallel to
+every other point.
+
+Consider a point. The set of points parallel to (or coincident with) it is
+the whole space. Let's call this the \emph{complementary space} of the point.
+
+Consider a line, and consider the set of lines parallel to it. This set is
+called the complementary space of the line. Each element of this set is a
+line. The complementary space is two-dimensional. We can in fact set up a
+one-to-one association between each element (a line) of this set with a
+point on a plane: select a plane that intersects the original line (without
+containing it in full). If we select a point on this plane, there's a
+unique line parallel to the original one that passes through the chosen
+point. Vice versa, if we select a line parallel to the original one, this
+line passes through a unique point of the plane. Each point of this plane
+is thus in one-to-one correspondence with an element of the complementary
+space. Note that in this way we can associate the complementary space with
+every plane that intersect the original line, so none of such planes is
+preferable to the others. We can thus visualize the complementary space of
+a line as a plane intersecting it, keeping in mind that the exact position
+and inclination of the plane don't matter.
+
+In an analogous way we can construct and visualize the complementary space
+of a plane: it has one dimension, its elements are the planes parallel to
+the original one, and it can be visualized as a line intersecting it,
+keeping in mind that the exact position and inclination of such line don't
+matter.
+
+In the case of the whole space, the complementary set has just one element:
+the space itself. It is therefore zero-dimensional.
+
+The complementary space of an $r$-flat has therefore dimension $N-r$.
+
+
+
+\subsection{Outer weights}
+\label{sec:outer_weights}
+
+Outer weights are analogous to inner weights, with the essential difference
+that they are defined \emph{on the complementary space} of the object under
+consideration. Since the complementary space of an $r$-flat is
+$(N-r)$-dimensional, the outer weights of point, line, plane, space are
+akin to the inner weights of space, plane, line, point.
+
+A point with an outer weight can be visualized as a point with an
+associated volume. We can imagine such volume as enveloping the point or
+being beside it, keeping in mind that the shape and location of such volume
+aren't important.
+
+A line with an outer weight can be visualized as a line crossed by a flat
+surface of given area; or as a tube, containing the original line, made of
+parallel lines and having that cross-sectional area. The cross-sectional
+shape of the tube doesn't matter.
+
+A plane with an outer weight can be visualized as a plane crossed by a
+segment with given length; or as two parallel planes, one on each side of
+the original plane, or one of which is the original plane.
+
+Finally, space with an outer orientation can be visualized as the whole
+space with an associated non-negative number.
+
+\subsection{Outer senses}
+\label{sec:outer_senses}
+
+
+
+
+
+
+
+
+
+
 
 \subsection{$\yr$-flats}
 \label{sec:flats}
