@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-11T22:20:53+0100
+%% Last-Updated: 2019-02-11T22:45:42+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -646,8 +646,8 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\ye}{e}
 \newcommand*{\yC}{C}
 \newcommand*{\yal}{\alpha}
-\makeatletter\newcommand*{\dextro}{\mathord{\,\includegraphics[totalheight=\heightof{@}]{screw-sense_posi.png}\,}}\makeatother
-\makeatletter\newcommand*{\laevo}{\mathord{\,\includegraphics[totalheight=\heightof{@}]{screw-sense_nega.png}\,}}\makeatother
+\newcommand*{\dextro}{\mathord{\,\includegraphics[totalheight=\heightof{O}]{screw-sense_posi2.png}\,}}
+\newcommand*{\laevo}{\mathord{\,\includegraphics[totalheight=\heightof{O}]{screw-sense_nega2.png}\,}}
 %%% Custom macros end @@@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1012,7 +1012,7 @@ space with outer weight and inner sense, the combination of weight and
 sense is represented by a non-negative number with a screw sense. It is
 convenient to consider negative numbers also in these cases, however: the
 presence of a negative sign simply indicates that the opposite screw sense
-should be considered; for example, $-2\dextro \equiv 2\laevo$.
+should be considered; for example, $\dextro(-2) \equiv \laevo 2$.
 
 \mynote{Note on Maxwell's discussion of such objects
 \begin{quotation}
