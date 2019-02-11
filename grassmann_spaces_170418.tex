@@ -1,14 +1,13 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-11T00:01:38+0100
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Report-no: ***
+%% Last-Updated: 2019-02-11T10:23:33+0100
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
 \ifarxiv\pdfmapfile{+classico.map}\fi
 \newif\ifafour
-\afourfalse % true = A4, false = A5
+\afourfalse% true = A4, false = A5
 \newif\iftypodisclaim % typographical disclaim on the side
 \typodisclaimtrue
 \newcommand*{\memfontfamily}{zplx}
@@ -27,12 +26,18 @@ british%
 \newcommand*{\headauthor}{Bengtsson \amp\ Porta Mana}
 \newcommand*{\reporthead}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Calls to packages (uncomment as needed)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %\usepackage{pifont}
+
 %\usepackage{fontawesome}
+
 \usepackage[T1]{fontenc} 
 \input{glyphtounicode} \pdfgentounicode=1
+
 \usepackage[utf8]{inputenx}
+
 %\usepackage{newunicodechar}
 % \newunicodechar{Ĕ}{\u{E}}
 % \newunicodechar{ĕ}{\u{e}}
@@ -55,27 +60,37 @@ british%
 % \newunicodechar{Ȳ}{\=Y}
 % \newunicodechar{ȳ}{\=y}
 
-\newcommand*{\bmmax}{0} % reduce number of bold fonts, before bm
-\newcommand*{\hmmax}{0} % reduce number of heavy fonts, before bm
+\newcommand*{\bmmax}{0} % reduce number of bold fonts, before font packages
+\newcommand*{\hmmax}{0} % reduce number of heavy fonts, before font packages
+
 \usepackage{textcomp}
-\usepackage[normalem]{ulem}
+
+%\usepackage[normalem]{ulem}% package for underlining
 % \makeatletter
 % \def\ssout{\bgroup \ULdepth=-.35ex%\UL@setULdepth
 %  \markoverwith{\lower\ULdepth\hbox
 %    {\kern-.03em\vbox{\hrule width.2em\kern1.2\p@\hrule}\kern-.03em}}%
 %  \ULon}
 % \makeatother
+
 \usepackage{amsmath}
+
 \usepackage{mathtools}
 \addtolength{\jot}{\jot} % increase spacing in multiline formulae
-\usepackage{empheq}% automatically calls amsmath and mathtools
-\newcommand*{\widefbox}[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
 \setlength{\multlinegap}{0pt}
+
+%\usepackage{empheq}% automatically calls amsmath and mathtools
+\newcommand*{\widefbox}[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
+
 %\usepackage{fancybox}
+
 %\usepackage{framed}
+
 % \usepackage[misc]{ifsym} % for dice
 % \newcommand*{\diceone}{{\scriptsize\Cube{1}}}
+
 \usepackage{amssymb}
+
 \usepackage{amsxtra}
 
 \usepackage[main=british,french,italian,german,swedish,latin,esperanto]{babel}\selectlanguage{british}
@@ -99,7 +114,6 @@ british%
 \theoremstyle{innote}
 \newtheorem*{innote}{}
 
-
 \usepackage[shortlabels,inline]{enumitem}
 \SetEnumitemKey{para}{itemindent=\parindent,leftmargin=0pt,listparindent=\parindent,parsep=0pt,itemsep=\topsep}
 % \begin{asparaenum} = \begin{enumerate}[para]
@@ -115,6 +129,7 @@ british%
 % \setlist[description]{leftmargin=\parindent}
 
 \usepackage[babel,theoremfont,largesc]{newpxtext}
+
 \usepackage[bigdelims,nosymbolsc%,smallerops % probably arXiv doesn't have it
 ]{newpxmath}
 \useosf\linespread{1.083}
@@ -143,8 +158,7 @@ british%
 %\re@DeclareMathSymbol{\coprodop}{\mathop}{largesymbols}{"60}
 %\re@DeclareMathSymbol{\varprod}{\mathop}{largesymbolsPXA}{16}
 \makeatother
-
-
+%%
 %% With euler font cursive for Greek letters - the [1] means 100% scaling
 \DeclareFontFamily{U}{egreek}{\skewchar\font'177}%
 \DeclareFontShape{U}{egreek}{m}{n}{<-6>s*[1]eurm5 <6-8>s*[1]eurm7 <8->s*[1]eurm10}{}%
@@ -174,20 +188,18 @@ british%
 \makeatother
 \input{definegreek.tex}% Greek letters not usually given in LaTeX.
 
-% Optima as sans-serif font
 %\usepackage%[scaled=0.9]%
-%{classico}
+%{classico}%  Optima as sans-serif font
 \renewcommand\sfdefault{uop}
 \DeclareMathAlphabet{\mathsf}  {T1}{\sfdefault}{m}{sl}
 \SetMathAlphabet{\mathsf}{bold}{T1}{\sfdefault}{b}{sl}
-\newcommand*{\mathte}[1]{\textbf{\textit{\textsf{#1}}}}
+%\newcommand*{\mathte}[1]{\textbf{\textit{\textsf{#1}}}}
 % Upright sans-serif math alphabet
 % \DeclareMathAlphabet{\mathsu}  {T1}{\sfdefault}{m}{n}
 % \SetMathAlphabet{\mathsu}{bold}{T1}{\sfdefault}{b}{n}
 
 % DejaVu Mono as typewriter text
 \usepackage[scaled=0.84]{DejaVuSansMono}
-
 
 \usepackage{mathdots}
 
@@ -200,7 +212,6 @@ british%
 \definecolor{myred}{RGB}{238,102,119}
 \definecolor{myredpurple}{RGB}{170,51,119}
 \definecolor{mygrey}{RGB}{187,187,187}
-
 % Tol (2012) colour-blind-, print-, screen-friendly colours; Munsell terminology
 % \definecolor{lbpurple}{RGB}{51,34,136}
 % \definecolor{lblue}{RGB}{136,204,238}
@@ -211,12 +222,13 @@ british%
 % \definecolor{lred}{RGB}{204,102,119}
 % \definecolor{lpred}{RGB}{136,34,85}
 % \definecolor{lrpurple}{RGB}{170,68,153}
- \definecolor{lgrey}{RGB}{221,221,221}
+\definecolor{lgrey}{RGB}{221,221,221}
 %\newcommand*\mycolourbox[1]{%
 %\colorbox{mygrey}{\hspace{1em}#1\hspace{1em}}}
 \colorlet{shadecolor}{lgrey}
 
 \usepackage{bm}
+
 \usepackage{microtype}
 
 \usepackage[backend=biber,mcite,%subentry,
@@ -262,7 +274,7 @@ citestyle=authoryear-comp,bibstyle=pglpm-authoryear,autopunct=false,sorting=ny,s
 }
 \newcommand*{\subtitleproc}[1]{}
 \newcommand*{\chapb}{ch.}
-
+%
 % \def\arxivp{}
 % \def\mparcp{}
 % \def\philscip{}
@@ -296,20 +308,34 @@ citestyle=authoryear-comp,bibstyle=pglpm-authoryear,autopunct=false,sorting=ny,s
 }
 
 \usepackage{graphicx}
+
 %\usepackage{wrapfig}
+
 %\usepackage{tikz-cd}
 
 \PassOptionsToPackage{hyphens}{url}\usepackage[hypertexnames=false]{hyperref}
+
 \usepackage[depth=4]{bookmark}
 \hypersetup{colorlinks=true,bookmarksnumbered,pdfborder={0 0 0.25},citebordercolor={0.2667 0.4667 0.6667},citecolor=mypurpleblue,linkbordercolor={0.6667 0.2 0.4667},linkcolor=myredpurple,urlbordercolor={0.1333 0.5333 0.2},urlcolor=mygreen,breaklinks=true,pdftitle={\pdftitle},pdfauthor={\pdfauthor}}
 % \usepackage[vertfit=local]{breakurl}% only for arXiv
 \providecommand*{\urlalt}{\href}
 
+\usepackage[british]{datetime2}
+\DTMnewdatestyle{mydate}%
+{% definitions
+\renewcommand*{\DTMdisplaydate}[4]{%
+\number##3\ \DTMenglishmonthname{##2} ##1}%
+\renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+\DTMsetdatestyle{mydate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Layout. I do not know on which kind of paper the reader will print the
 %%% paper on (A4? letter? one-sided? double-sided?). So I choose A5, which
 %%% provides a good layout for reading on screen and save paper if printed
 %%% two pages per sheet. Average length line is 66 characters and page
 %%% numbers are centred.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifafour\setstocksize{297mm}{210mm}%{*}% A4
 \else\setstocksize{210mm}{5.5in}%{*}% 210x139.7
 \fi
@@ -373,7 +399,7 @@ citestyle=authoryear-comp,bibstyle=pglpm-authoryear,autopunct=false,sorting=ny,s
 \newcommand{\addpara}[1]{\paragraph*{#1.}\addcontentsline{toc}{subsubsection}{#1}}
 \newcommand{\addparap}[1]{\paragraph*{#1}\addcontentsline{toc}{subsubsection}{#1}}
 
-% Headers and footers
+%%% Headers, footers, pagestyle
 \copypagestyle{manaart}{plain}
 \makeheadrule{manaart}{\headwidth}{0.5\normalrulethickness}
 \makeoddhead{manaart}{%
@@ -399,7 +425,6 @@ citestyle=authoryear-comp,bibstyle=pglpm-authoryear,autopunct=false,sorting=ny,s
 \makeoddfoot{plain}{}{\makebox[0pt]{\thepage}}{}
 \fi%typodisclaimtrue
 \makeoddhead{plain}{}{}{\footnotesize\reporthead}
-
 % \copypagestyle{manainitial}{plain}
 % \makeheadrule{manainitial}{\headwidth}{0.5\normalrulethickness}
 % \makeoddhead{manainitial}{%
@@ -427,15 +452,6 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \postauthor{\par\end{center}}
 \predate{\DTMsetdatestyle{mydate}\begin{center}\footnotesize}
 \postdate{\end{center}\vspace{-\medskipamount}}
-\usepackage[british]{datetime2}
-\DTMnewdatestyle{mydate}%
-{% definitions
-\renewcommand*{\DTMdisplaydate}[4]{%
-\number##3\ \DTMenglishmonthname{##2} ##1}%
-\renewcommand*{\DTMDisplaydate}{\DTMdisplaydate}%
-}
-\DTMsetdatestyle{mydate}
-
 
 \setfloatadjustment{figure}{\footnotesize}
 \captiondelim{\quad}
@@ -444,7 +460,6 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \captiontitlefont{\footnotesize}
 \firmlists*
 \midsloppy
-
 % handling orphan/widow lines, memman.pdf
 % \clubpenalty=10000
 % \widowpenalty=10000
@@ -456,11 +471,11 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \predisplaypenalty=10000
 \postdisplaypenalty=1549
 \displaywidowpenalty=1602
-
 \selectlanguage{british}\frenchspacing
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Paper's details
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Paper's details %%%%
 \title{\propertitle%\\
 %  {\large ***subtitle}%
 }
@@ -482,7 +497,10 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \date{Draft of \today\ (first drafted \firstdraft)}
 %\date{\firstpublished; updated \updated}
 
-%@@@@@@@@@@ new macros @@@@@@@@@@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Macros @@@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Common ones - uncomment as needed
 %\providecommand{\nequiv}{\not\equiv}
 %\providecommand{\coloneqq}{\mathrel{\mathop:}=}
@@ -602,6 +620,9 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 %\newcommand*{\qem}{\leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
 %\quad\hbox{\QEM}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Custom macros for this file @@@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{notecolour}{RGB}{68,170,153}
 \newcommand*{\puzzle}{{\fontencoding{U}\fontfamily{fontawesometwo}\selectfont\symbol{225}}}
 %\newcommand*{\puzzle}{\maltese}
@@ -612,7 +633,6 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 % %\smash{
 % \begin{tabular}[#1]{c}#2\\[0.5\jot]\rule{1pt}{#3}\\#4\end{tabular}}%}
 % \newcommand*{\ptext}[1]{\text{\small #1}}
-%@@@@ Custom macros for this file @@@@
 %\DeclareMathOperator*{\argsup}{arg\,sup}
 \newcommand*{\gm}{Grassmann}
 \newcommand*{\ve}{\curlyvee}
@@ -626,15 +646,20 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\ye}{e}
 \newcommand*{\yC}{C}
 \newcommand*{\yal}{\alpha}
-%@@@@@@@@@@ new macros end @@@@@@@@@@
+%%% Custom macros end @@@
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Beginning of document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \firmlists
 \begin{document}
 \captiondelim{\quad}\captionnamefont{\footnotesize}\captiontitlefont{\footnotesize}
 \selectlanguage{british}\frenchspacing
-
-%%% Title and abstract %%%
 \maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \abstractrunin
 \abslabeldelim{}
 \renewcommand*{\abstractname}{}
@@ -651,11 +676,13 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 % {\footnotesize MSC: ***}%
 %\qquad{\footnotesize Keywords: ***}
 \end{abstract}
-
 \selectlanguage{british}\frenchspacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Epigraph
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \asudedication{\small ***}
 % \vspace{\bigskipamount}
-
 % \setlength{\epigraphwidth}{.7\columnwidth}
 % %\epigraphposition{flushright}
 % \epigraphtextposition{flushright}
@@ -666,6 +693,11 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 % %\setlength{\afterepigraphskip}{0pt}
 % \epigraph{\emph{text}}{source}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% BEGINNING OF MAIN TEXT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \mynote{\footnotesize Synopsis:
   \begin{itemize}\tightlist
@@ -1420,7 +1452,9 @@ achieved by the sum of such geometric entities in the \gm\ space.
 %\caption{***}\label{fig:comparison_a5}
 %\end{figure}% exp_family_maxent.nb
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Acknowledgements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \iffalse
 \begin{acknowledgements}
   PGLPM thanks Mari \amp\ Miri for continuous encouragement and affection,
@@ -1433,16 +1467,18 @@ achieved by the sum of such geometric entities in the \gm\ space.
 \end{acknowledgements}
 \fi
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Appendices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \newpage
 % %\renewcommand*{\appendixpagename}{Appendix}
 % %\renewcommand*{\appendixname}{Appendix}
 % %\appendixpage
 % \appendix
 
-
-%%%%%%%%%%%%%%% BIB %%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \defbibnote{prenote}{{\footnotesize (\enquote{de $X$} is listed under D,
     \enquote{van $X$} under V, and so on, regardless of national
     conventions.)\par}}
@@ -1452,9 +1488,11 @@ achieved by the sum of such geometric entities in the \gm\ space.
 \printbibliography[prenote=prenote%,postnote=postnote
 ]
 
-
 \end{document}
----------- cut text ----------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Cut text (won't be compiled)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 
 %%% Local Variables: 
