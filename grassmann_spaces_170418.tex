@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-11T22:49:30+0100
+%% Last-Updated: 2019-02-12T16:25:31+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -547,7 +547,7 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 %\newcommand*{\with}{\colon}%with (list of indices)
 %\newcommand*{\mul}{\times}%multiplication
 %\newcommand*{\inn}{\cdot}%inner product
-%\newcommand*{\dotv}{\mathord{\,\cdot\,}}%variable place
+\newcommand*{\dotv}{\mathord{\,\cdot\,}}%variable place
 %\newcommand*{\comp}{\circ}%composition of functions
 %\newcommand*{\con}{\mathbin{:}}%scal prod of tensors
 %\newcommand*{\equi}{\sim}%equivalent to 
@@ -627,7 +627,7 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\puzzle}{{\fontencoding{U}\fontfamily{fontawesometwo}\selectfont\symbol{225}}}
 %\newcommand*{\puzzle}{\maltese}
 \newcommand{\mynote}[1]{ {\color{notecolour}\puzzle\ #1}}
-%\newcommand*{\widebar}[1]{{\mkern1.5mu\skew{2}\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}}
+\newcommand*{\widebar}[1]{{\mkern1.5mu\skew{2}\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}}
 
 % \newcommand{\explanation}[4][t]{%\setlength{\tabcolsep}{-1ex}
 % %\smash{
@@ -646,8 +646,12 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\ye}{e}
 \newcommand*{\yC}{C}
 \newcommand*{\yal}{\alpha}
-\newcommand*{\dextro}{\mathord{\,\includegraphics[totalheight=\heightof{O}]{screw-sense_posi2.png}\,}}
-\newcommand*{\laevo}{\mathord{\,\includegraphics[totalheight=\heightof{O}]{screw-sense_nega4.png}\,}}
+\newcommand*{\dextro}{\mathord{\includegraphics[totalheight=\heightof{O}]{dextro.png}}}
+\newcommand*{\laevo}{\mathord{\includegraphics[totalheight=\heightof{O}]{laevo.png}}}
+\newcommand*{\ywp}{\widebar{0}}
+\newcommand*{\ywl}{\widebar{1}}
+\newcommand*{\ywa}{\widebar{2}}
+\newcommand*{\ywv}{\widebar{3}}
 %%% Custom macros end @@@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -977,9 +981,6 @@ Finally, outer sense for space is simply a sign, \enquote{$+$} or
 \enquote{$-$}. The combination of outer sense and outer weight for space is
 thus represented by a real number.
 
-In the latter case the real number is associated with the whole of space,
-not to any point in particular. Hence we call space with outer weight and
-outer direction a \emph{scalar}.
 
 \mynote{Pictures}
 
@@ -1014,6 +1015,20 @@ convenient to consider negative numbers also in these cases, however: the
 presence of a negative sign simply indicates that the opposite screw sense
 should be considered; for example, $\dextro(-2) \equiv \laevo 2$.
 
+The four kinds of space are especially important. Space with outer weight
+and outer sense is just represented by a real number. We'll see that it has
+all the properties of a \emph{scalar}, and therefore we call it that way.
+Space with outer weight and inner sense behaves like a scalar with a screw
+sense \citep[\cf][\sect~3.2.1]{bossavit1991}; we call it an \emph{axial
+  scalar}. Space with inner weight and outer sense behaves like a
+\enquote{volume element}, and we call it a \emph{pseudoscalar}. Finally, we
+call space with inner weight and inner sense an \emph{axial pseudoscalar}.
+Note that scalars and axial scalars have a well defined unit value, whereas
+pseudoscalars of either kind don't.
+
+We can indicate the weight of a flat independently of its sense by an
+absolute-value notation, \enquote{$\abs{\dotv}$}.
+
 \mynote{Note on Maxwell's discussion of such objects
 \begin{quotation}
   Physical vector quantities may be divided into two classes, in one of
@@ -1036,25 +1051,77 @@ should be considered; for example, $\dextro(-2) \equiv \laevo 2$.
 
 }
 
-
-
-We next show how objects in each of these sixteen categories can be
-combined together to obtain an object in the same category. The operation
-we're going to introduce is a generalization of the calculation of a
-barycentre.
-
+\mynote{Is it best to introduce products first??}
 
 \section{Sum of kindred objects}
 \label{sec:sum_kindred}
 
+We next show how objects in each of these sixteen categories can be
+combined together to obtain an object in the same category. We assume that
+the reader already has an intuitive idea of how to sum or subtract two
+lengths on the same line or on two parallel lines, two areas on the same
+plane or on two parallel planes, and two volumes. Remember that such sums
+and subtractions do not require the notions of distance or angle.
+
+
 \subsection{Sum of points}
 \label{sec:sum_points}
 
+The sum of points with inner weight and sense generalizes the calculation
+of a centre of mass and the operation of affine combination. It's
+associative and commutative: it can be done in an arbitrary order.
+
+The sum of the point $A$ with inner weight and sense $a$ and the point $B$
+with inner weight and sense $b$ is a point $C$ of inner weight and sense
+$a+b$, located on the line determined by $A$ and $B$, and such that the
+segment with endpoints $C$, $A$ is $\abs{b/(a+b)}$ times the segment with
+endpoints $A$, $B$, and the segment with endpoints $B$, $C$ is
+$\abs{a/(a+b)}$ times the segment with endpoints $A$, $B$. A moment's
+thought shows that these two requirements determine a unique location for
+$C$. If the ratio $b/(a+b)$ is negative, then $C$ and $B$ lie on opposite
+sides of $A$; analogously for the ratio $a/(a+b)$. \mynote{Pictures}
+
+For the sums of three non-collinear points and four mutually non-coplanar
+points similar constructions exist, with the ratios referring to areas and
+volumes.
+
+
+\section{Products}
+\label{sec:products}
+
+Let's indicate an $r$-flat with inner weight with $(\widebar{r}, N-r)$ and
+an $r$-flat with outer weight with $(r, \widebar{N-r})$: this redundant
+notation help us remember the dimensions of the flat and of its
+complementary space, and of where the weight resides.
+
+This table gives the type of flat found by multiplying flats with inner
+weights -- the \emph{progressive product}:
+
+{\centering\begin{tabular}{c|cccc}
+  & $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
+  \midrule
+  $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$& \\
+ $(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&& \\
+ $(\ywa,1)$&$(\ywv,0)$&&& \\
+ $(\ywv,0)$&&&& 
+           \end{tabular}
+
+         }
 
 
 
 
 
+         {\centering\begin{tabular}{c|cccc}
+  & $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
+  \midrule
+  $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$& \\
+ $(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&& \\
+ $(\ywa,1)$&$(\ywv,0)$&&& \\
+ $(\ywv,0)$&&&& 
+           \end{tabular}
+
+         }
 
 \clearpage
 \hrule
