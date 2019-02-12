@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-12T18:57:42+0100
+%% Last-Updated: 2019-02-12T19:19:03+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -1108,33 +1108,71 @@ weights -- the \emph{progressive product}:
 
 }
 
+\bigskip
+
 This table gives the type of flat found by multiplying flats with outer
 weights -- the \emph{regressive product}:
 
-         {\centering\begin{tabular}{c|cccc}
-  & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
-  \midrule
-  $(0,\ywv)$&&&&$(0,\ywv)$ \\
-  $(1,\ywa)$&&&$(0,\ywv)$&$(1,\ywa)$ \\
-  $(2,\ywl)$&&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
-  $(3,\ywp)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+{\centering\begin{tabular}{c|cccc}
+             & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+             \midrule
+             $(0,\ywv)$&&&&$(0,\ywv)$ \\
+             $(1,\ywa)$&&&$(0,\ywv)$&$(1,\ywa)$ \\
+             $(2,\ywl)$&&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
+             $(3,\ywp)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
            \end{tabular}
 
          }
+the empty entries being zero.
+         
+\bigskip
 
 This table gives the type of flat found by multiplying flats with inner
 weights and flats with outer weights -- the \emph{contraction}:
 
-         {\centering\begin{tabular}{c|cccc}
-  & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
-  \midrule
-  $(\ywp,3)$&$(0,\ywv)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$ \\
- $(\ywl,2)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$ \\
- $(\ywa,1)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$ \\
- $(\ywv,0)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
+{\centering\begin{tabular}{c|cccc}
+             & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+             \midrule
+             $(\ywp,3)$&$(0,\ywv)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$ \\
+             $(\ywl,2)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$ \\
+             $(\ywa,1)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$ \\
+             $(\ywv,0)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
            \end{tabular}
 
          }
+
+\bigskip
+
+From the last two tables we see that a space with outer weight, type
+$(3,\ywp)$, behaves like a scalar. Moreover, the general structure of the
+three tables suggest that we could complete the first two in the following
+way:
+
+{\centering\begin{tabular}{c|cccc}
+  & $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
+  \midrule
+  $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$ \\
+ $(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$ \\
+ $(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
+ $(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+           \end{tabular}
+
+}
+
+\bigskip
+
+{\centering\begin{tabular}{c|cccc}
+             & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+             \midrule
+             $(0,\ywv)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$ \\
+             $(1,\ywa)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$ \\
+             $(2,\ywl)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
+             $(3,\ywp)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+           \end{tabular}
+
+         }
+
+
 
 \clearpage
 \hrule
