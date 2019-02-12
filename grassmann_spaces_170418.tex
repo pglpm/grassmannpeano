@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-12T19:19:03+0100
+%% Last-Updated: 2019-02-12T22:42:46+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -637,6 +637,7 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\gm}{Grassmann}
 \newcommand*{\ve}{\curlyvee}
 \newcommand*{\we}{\curlywedge}
+\newcommand*{\co}{\centerdot}
 \newcommand*{\yr}{r}
 \newcommand*{\yN}{N}
 \newcommand*{\yw}{w}
@@ -1097,49 +1098,49 @@ complementary space, and of where the weight resides.
 This table gives the type of flat found by multiplying flats with inner
 weights -- the \emph{progressive product}:
 
-{\centering\begin{tabular}{c|cccc}
-  & $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
-  \midrule
-  $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$& \\
- $(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&& \\
- $(\ywa,1)$&$(\ywv,0)$&&& \\
- $(\ywv,0)$&&&& 
-           \end{tabular}
+{\centering
+  \begin{tabular}{c|cccc}
+    $\ve$& $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
+    \midrule
+    $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$& \\
+    $(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&& \\
+    $(\ywa,1)$&$(\ywv,0)$&&& \\
+    $(\ywv,0)$&&&& 
+  \end{tabular}
 
 }
-
-\bigskip
+the empty entries being zero.
 
 This table gives the type of flat found by multiplying flats with outer
 weights -- the \emph{regressive product}:
 
-{\centering\begin{tabular}{c|cccc}
-             & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
-             \midrule
-             $(0,\ywv)$&&&&$(0,\ywv)$ \\
-             $(1,\ywa)$&&&$(0,\ywv)$&$(1,\ywa)$ \\
-             $(2,\ywl)$&&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
-             $(3,\ywp)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
-           \end{tabular}
+{\centering
+  \begin{tabular}{c|cccc}
+    $\we$& $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+    \midrule
+    $(0,\ywv)$&&&&$(0,\ywv)$ \\
+    $(1,\ywa)$&&&$(0,\ywv)$&$(1,\ywa)$ \\
+    $(2,\ywl)$&&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
+    $(3,\ywp)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+  \end{tabular}
 
-         }
+}
 the empty entries being zero.
-         
-\bigskip
-
+        
 This table gives the type of flat found by multiplying flats with inner
 weights and flats with outer weights -- the \emph{contraction}:
 
-{\centering\begin{tabular}{c|cccc}
-             & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
-             \midrule
-             $(\ywp,3)$&$(0,\ywv)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$ \\
-             $(\ywl,2)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$ \\
-             $(\ywa,1)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$ \\
-             $(\ywv,0)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
-           \end{tabular}
+{\centering
+  \begin{tabular}{c|cccc}
+    $\co$& $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+    \midrule
+    $(\ywp,3)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$ \\
+    $(\ywl,2)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$ \\
+    $(\ywa,1)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$ \\
+    $(\ywv,0)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
+  \end{tabular}
 
-         }
+}
 
 \bigskip
 
@@ -1148,31 +1149,126 @@ $(3,\ywp)$, behaves like a scalar. Moreover, the general structure of the
 three tables suggest that we could complete the first two in the following
 way:
 
-{\centering\begin{tabular}{c|cccc}
-  & $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
-  \midrule
-  $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$ \\
- $(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$ \\
- $(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
- $(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
-           \end{tabular}
+{\centering
+  \begin{tabular}{c|cccc}
+    & $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
+    \midrule
+    $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$ \\
+    $(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$ \\
+    $(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
+    $(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+  \end{tabular}
 
 }
 
 \bigskip
+{\centering
+  \begin{tabular}{c|cccc}
+    & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+    \midrule
+    $(0,\ywv)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$ \\
+    $(1,\ywa)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$ \\
+    $(2,\ywl)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
+    $(3,\ywp)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+  \end{tabular}
 
-{\centering\begin{tabular}{c|cccc}
-             & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
-             \midrule
-             $(0,\ywv)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$ \\
-             $(1,\ywa)$&$(\ywa,1)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$ \\
-             $(2,\ywl)$&$(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
-             $(3,\ywp)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
-           \end{tabular}
+}
 
-         }
+On the other hand we can consider the table for the contraction as really
+an extension of progressive (above the anti-diagonal) and regressive
+(anti-diagonal and below) products. Likewise, the new parts in the last two
+tables extend the regressive and progressive products. This way we are left
+with two products with the following tables:
+
+\bigskip
+
+{\centering
+  \begin{tabular}{c|ccccccccc}
+    $\ve$& $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$  &
+ &$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+    \midrule
+    $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&&
+ &$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$& \\
+    $(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&&&
+ &$(2,\ywl)$&$(3,\ywp)$&& \\
+    $(\ywa,1)$&$(\ywv,0)$&&&&
+ &$(3,\ywp)$&&& \\
+    $(\ywv,0)$&&&&&
+ &&&& \\
+ &&&&&&&&& \\
+    $(0,\ywv)$ &$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$&&
+ &$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$& \\                                         
+    $(1,\ywa)$ &$(2,\ywl)$&$(3,\ywp)$&&&
+ &$(\ywa,1)$&$(\ywv,0)$&& \\                    
+    $(2,\ywl)$&$(3,\ywp)$&&&&
+ &$(\ywv,0)$&&& \\
+ $(3,\ywp)$&&&&&&&&& 
+  \end{tabular}
+
+}
+empty entries being zero.
+
+\bigskip
+
+{\centering
+  \begin{tabular}{c|ccccccccc}
+    $\we$& $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$  &
+ &$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+    \midrule
+    $(\ywp,3)$&&&&$(0,\ywv)$ &
+     &&&&$(\ywp,3)$ \\
+    $(\ywl,2)$&&&$(0,\ywv)$&$(1,\ywa)$ &
+&&&$(\ywp,3)$&$(\ywl,2)$ \\
+    $(\ywa,1)$&&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ &
+&&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$ \\
+    $(\ywv,0)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ &
+ &$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
+ &&&&&&&&& \\
+    $(0,\ywv)$&&&&$(\ywp,3)$ &
+&&&&$(0,\ywv)$ \\                               
+$(1,\ywa)$&&&$(\ywp,3)$&$(\ywl,2)$ &
+&&&$(0,\ywv)$&$(1,\ywa)$ \\
+ $(2,\ywl)$&&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$ &
+ &&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
+ $(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ &
+ &$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$
+  \end{tabular}
+
+}
+empty entries being zero.
+
+\bigskip
+
+Note the following relations regarding weights, similar to the
+multiplication of signs:
+\begin{equation}
+  \label{eq:parities_products}
+  \begin{aligned}
+    \text{inner}\ve\text{inner}&=\text{inner}
+    &\qquad
+      \text{inner}\we\text{inner}&=\text{outer}
+\\
+    \text{outer}\ve\text{outer}&=\text{inner}
+    &\qquad
+    \text{outer}\we\text{outer}&=\text{outer}
+    \\
+    \text{inner}\ve\text{outer}&=\text{outer}
+&\qquad
+    \text{inner}\we\text{outer}&=\text{inner}
+  \end{aligned}
+\end{equation}
 
 
+
+\bigskip\mynote{The question whether we can  replace the zero entries of the first
+  two tables pivots around this problem:
+
+  Consider five points with inner weight: $A_1,\dotsc,A_5$. The fact that
+  all of them lie in the same space can be expressed with the progressive
+  product as $A_1 \ve\dotsb\ve A_5 = 0$. The regressive product of the
+  space $A_1 \ve\dotsb\ve A_4$ and the point $A_5$ is instead non-zero:
+  $(A_1 \ve\dotsb\ve A_4) \we A_5 \ne 0$. There is no way to make allowance for
+  both these statements with one product only, even if non-associative.}
 
 \clearpage
 \hrule
