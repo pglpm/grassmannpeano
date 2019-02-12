@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-12T16:25:31+0100
+%% Last-Updated: 2019-02-12T18:57:42+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -648,10 +648,10 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\yal}{\alpha}
 \newcommand*{\dextro}{\mathord{\includegraphics[totalheight=\heightof{O}]{dextro.png}}}
 \newcommand*{\laevo}{\mathord{\includegraphics[totalheight=\heightof{O}]{laevo.png}}}
-\newcommand*{\ywp}{\widebar{0}}
-\newcommand*{\ywl}{\widebar{1}}
-\newcommand*{\ywa}{\widebar{2}}
-\newcommand*{\ywv}{\widebar{3}}
+\newcommand*{\ywp}{\dot{0}}
+\newcommand*{\ywl}{\dot{1}}
+\newcommand*{\ywa}{\dot{2}}
+\newcommand*{\ywv}{\dot{3}}
 %%% Custom macros end @@@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1089,8 +1089,8 @@ volumes.
 \section{Products}
 \label{sec:products}
 
-Let's indicate an $r$-flat with inner weight with $(\widebar{r}, N-r)$ and
-an $r$-flat with outer weight with $(r, \widebar{N-r})$: this redundant
+Let's indicate an $r$-flat with inner weight with $(\dot{r}, N-r)$ and
+an $r$-flat with outer weight with $(r, \dot{N-r})$: this redundant
 notation help us remember the dimensions of the flat and of its
 complementary space, and of where the weight resides.
 
@@ -1106,19 +1106,32 @@ weights -- the \emph{progressive product}:
  $(\ywv,0)$&&&& 
            \end{tabular}
 
-         }
+}
 
-
-
-
+This table gives the type of flat found by multiplying flats with outer
+weights -- the \emph{regressive product}:
 
          {\centering\begin{tabular}{c|cccc}
-  & $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
+  & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
   \midrule
-  $(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$& \\
- $(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$&& \\
- $(\ywa,1)$&$(\ywv,0)$&&& \\
- $(\ywv,0)$&&&& 
+  $(0,\ywv)$&&&&$(0,\ywv)$ \\
+  $(1,\ywa)$&&&$(0,\ywv)$&$(1,\ywa)$ \\
+  $(2,\ywl)$&&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$ \\
+  $(3,\ywp)$&$(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+           \end{tabular}
+
+         }
+
+This table gives the type of flat found by multiplying flats with inner
+weights and flats with outer weights -- the \emph{contraction}:
+
+         {\centering\begin{tabular}{c|cccc}
+  & $(0,\ywv)$&$(1,\ywa)$&$(2,\ywl)$&$(3,\ywp)$ \\
+  \midrule
+  $(\ywp,3)$&$(0,\ywv)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$ \\
+ $(\ywl,2)$&$(2,\ywl)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$ \\
+ $(\ywa,1)$&$(3,\ywp)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$ \\
+ $(\ywv,0)$&$(\ywp,3)$&$(\ywl,2)$&$(\ywa,1)$&$(\ywv,0)$ \\
            \end{tabular}
 
          }
