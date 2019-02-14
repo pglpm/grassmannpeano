@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-14T11:39:36+0100
+%% Last-Updated: 2019-02-14T13:49:19+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -626,10 +626,10 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \iffalse
 % from \texttt{CarLaTeX}, \url{https://tex.stackexchange.com/a/474642/97039}
 % requires:
-% \usepackage{calc}
-% \usepackage{tikz}
-% \usetikzlibrary{hobby, arrows.meta,bending}
-\newcommand*{\dextro}[1][1]{%
+ \usepackage{calc}
+ \usepackage{tikz}
+ \usetikzlibrary{hobby, arrows.meta,bending}
+\newcommand*{\screw}[1][1]{%
 \begin{tikzpicture}[baseline, xscale=#1]
 \draw[black, -{To[angle=90:.3cm 1,length=9mm, flex'=.86]}, line width=4pt] (.1,.85) to [curve through={(.79,.18) .. (1.45,.7) 
 (1.48,.8) .. 
@@ -639,7 +639,11 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \node[circle, minimum width=4pt, fill=black,
   inner sep=0pt, outer sep=0pt] at (.1,.85) {};
 \end{tikzpicture}}
+\newcommand*{\dextro}{\mathord{\resizebox{!}{\heightof{O}}{\screw}}}
+\newcommand*{\laevo}{\mathord{\resizebox{!}{\heightof{O}}{\screw[-1]}}}
 \fi
+\newcommand*{\dextro}{\mathord{\includegraphics[totalheight=\heightof{O}]{dextro.png}}}
+\newcommand*{\laevo}{\mathord{\includegraphics[totalheight=\heightof{O}]{laevo.png}}}
 
 \definecolor{notecolour}{RGB}{68,170,153}
 \newcommand*{\puzzle}{{\fontencoding{U}\fontfamily{fontawesometwo}\selectfont\symbol{225}}}
@@ -656,6 +660,7 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\ve}{\curlyvee}
 \newcommand*{\we}{\curlywedge}
 \newcommand*{\co}{\centerdot}
+\newcommand*{\+}{\boxplus}
 \newcommand*{\yr}{r}
 \newcommand*{\yN}{N}
 \newcommand*{\yw}{w}
@@ -666,8 +671,6 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\yC}{C}
 \newcommand*{\yal}{\alpha}
 \newcommand*{\ybe}{\beta}
-\newcommand*{\dextro}{\mathord{\includegraphics[totalheight=\heightof{O}]{dextro.png}}}
-\newcommand*{\laevo}{\mathord{\includegraphics[totalheight=\heightof{O}]{laevo.png}}}
 \newcommand*{\ywp}{\dot{0}}
 \newcommand*{\ywl}{\dot{1}}
 \newcommand*{\ywa}{\dot{2}}
@@ -1093,23 +1096,23 @@ the original weight.
 
 Let's call \emph{harmonic sum} the reciprocal of the sum of the
 reciprocals, in analogy with the harmonic mean (note that this is very
-different from a harmonic series). Note that whereas the reciprocal of a
-length, area, or volume is undefined in the absence of a notion of distance
-(metric), the harmonic of parallel lengths, parallel areas, and volumes is
-a well-defined geometric construction even without a notion of distance,
-because it can be computed in term of sums and ratios. For example, if
-$\yal$ and $\ybe$ are parallel areas, their harmonic sum is defined in
-terms of ratios as
+different from a harmonic series), and denote it with \enquote{$\+$}.
+Whereas the reciprocal of a length, area, or volume is undefined in the
+absence of a notion of distance (metric), the harmonic of parallel lengths,
+parallel areas, and volumes is a well-defined geometric construction even
+without a notion of distance, because it can be computed in term of sums
+and ratios. For example, if $\yal$ and $\ybe$ are parallel areas, their
+harmonic sum is defined in terms of ratios as
 \begin{equation}
   \label{eq:reciprocal_sum}
-  \frac{1}{\frac{1}{\yal}+ \frac{1}{\ybe}} \defd
+\yal \+ \ybe =  \frac{1}{\frac{1}{\yal}+ \frac{1}{\ybe}} \defd
   \frac{\ybe}{\yal+\ybe}\yal \equiv
   \frac{\yal}{\yal+\ybe}\ybe.
 \end{equation}
 In words, we first compute the total area $\yal+\ybe$, then the ratio
 between the area $\ybe$ and this total, and finally we construct the area
-that has this same ratio with the area $\yal$.
-\mynote{Picture} 
+that has this same ratio with the area $\yal$. \mynote{Picture} The
+harmonic sum is associative just like the ordinary sum.
 
 
 \subsection{Sum of points}
@@ -1122,12 +1125,14 @@ associative and commutative: it can be done in an arbitrary order.
 The sum of the point $A$ with inner weight and sense $a$ and the point $B$
 with inner weight and sense $b$ is a point $C$ of inner weight and sense
 $a+b$, located on the line determined by $A$ and $B$, and such that the
-segment with endpoints $C$, $A$ is $\abs{b/(a+b)}$ times the segment with
-endpoints $A$, $B$, and the segment with endpoints $B$, $C$ is
-$\abs{a/(a+b)}$ times the segment with endpoints $A$, $B$. A moment's
-thought shows that these two requirements determine a unique location for
-$C$. If the ratio $b/(a+b)$ is negative, then $C$ and $B$ lie on opposite
-sides of $A$; analogously for the ratio $a/(a+b)$. \mynote{Pictures}
+segment with endpoints $C$, $A$ and that with endpoints $A$, $B$ are in a
+ratio $\abs{b/(a+b)}$, and the segment with endpoints $B$, $C$ and that
+with endpoints $A$, $B$ are in a ratio $\abs{a/(a+b)}$. A moment's thought
+shows that these two requirements determine a unique location for $C$ (on
+the other hand, specifying the ratio between $C,A$ and $C,B$ is not enough
+to determine $C$'s position). If the ratio $b/(a+b)$ is negative, then $C$
+and $B$ lie on opposite sides of $A$; analogously for the ratio $a/(a+b)$.
+\mynote{Pictures}
 
 For the sums of three non-collinear points and four mutually non-coplanar
 points similar constructions exist, with the ratios referring to areas and
@@ -1142,7 +1147,32 @@ sign, and $\dextro \equiv -\laevo$ as explained in
 
 \bigskip
 
-The sum of points with outer weight and inner sense
+The sum of the point $A$ with outer weight and inner sense $\yal$ and the
+point $B$ with outer weight and inner sense $\ybe$ is a point $C$ of outer
+weight and inner sense $\yal \+ \ybe$, located on the line determined by
+$A$ and $B$, and such that the segment with endpoints $C$, $A$ and that
+with endpoints $A$, $B$ are in a ratio $\abs{(\yal \+ \ybe)/\ybe}$, and the
+segment with endpoints $B$, $C$ and that with endpoints $A$, $B$ are in a
+ratio $\abs{(\yal \+ \ybe)/\yal}$. If the ratio $\abs{(\yal \+ \ybe)/\ybe}$
+is negative, then $C$ and $B$ lie on opposite sides of $A$; analogously for
+the other ratio. \mynote{Pictures}
+
+\bigskip
+
+Finally, the sum of points with outer weight and outer sense proceeds in an
+analogous way as the last one, with the understanding that their screw
+sense behaves like a sign, and $\dextro \equiv -\laevo$ as explained in
+\sect~\ref{sec:summary_kinds_objects}.
+
+\mynote{Find an interpretation of the sum with outer weights!}
+
+The sums of points with outer weights may at first appear quite convoluted.
+To help understand how it works it's useful to think of a point with outer
+weight as a point with a unit mass that is uniformly distributed in the
+volume representing to the outer weight. The outer weight itself is the
+mass \emph{density} thus obtained. This explains why a doubled outer weight
+is represented by a halved volume: the density is doubled, hence the unit
+mass must be distributed over half the initial volume.
 
 \section{Products}
 \label{sec:products}
