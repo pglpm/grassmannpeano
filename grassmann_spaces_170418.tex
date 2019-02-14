@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-14T11:21:16+0100
+%% Last-Updated: 2019-02-14T11:39:36+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -1086,15 +1086,20 @@ and subtractions do not require the notions of distance or angle.
 Flats with inner weight and flats with outer weights differ in an important
 respect with respect to summation. For the first, the weights generally add
 up (with sign); for the second, \emph{the reciprocal of the weights}
-generally add up. Thus, if we add a flat with inner weight to itself, we
-obtain a flat with twice the original weight; if we add a flat with outer
-weight to itself, we obtain a flat with \emph{half} the original weight.
+generally add up. Thus, if we add a flat with inner
+weight to itself, we obtain a flat with twice the original weight; if we
+add a flat with outer weight to itself, we obtain a flat with \emph{half}
+the original weight.
 
-Note that the sum of the reciprocal of two weights -- in particular
-parallel lengths, parallel areas, volumes -- is a well-defined geometric
-construction even in the absence of a notion of distance, because it can be
-computed in term of sums and ratios. For example, if $\yal$ and $\ybe$ are
-parallel areas, their reciprocal sum is defined in terms of ratios as
+Let's call \emph{harmonic sum} the reciprocal of the sum of the
+reciprocals, in analogy with the harmonic mean (note that this is very
+different from a harmonic series). Note that whereas the reciprocal of a
+length, area, or volume is undefined in the absence of a notion of distance
+(metric), the harmonic of parallel lengths, parallel areas, and volumes is
+a well-defined geometric construction even without a notion of distance,
+because it can be computed in term of sums and ratios. For example, if
+$\yal$ and $\ybe$ are parallel areas, their harmonic sum is defined in
+terms of ratios as
 \begin{equation}
   \label{eq:reciprocal_sum}
   \frac{1}{\frac{1}{\yal}+ \frac{1}{\ybe}} \defd
@@ -1104,7 +1109,7 @@ parallel areas, their reciprocal sum is defined in terms of ratios as
 In words, we first compute the total area $\yal+\ybe$, then the ratio
 between the area $\ybe$ and this total, and finally we construct the area
 that has this same ratio with the area $\yal$.
-\mynote{Picture}
+\mynote{Picture} 
 
 
 \subsection{Sum of points}
