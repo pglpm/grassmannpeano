@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-12T22:42:46+0100
+%% Last-Updated: 2019-02-14T11:21:16+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -623,6 +623,24 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Custom macros for this file @@@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iffalse
+% from \texttt{CarLaTeX}, \url{https://tex.stackexchange.com/a/474642/97039}
+% requires:
+% \usepackage{calc}
+% \usepackage{tikz}
+% \usetikzlibrary{hobby, arrows.meta,bending}
+\newcommand*{\dextro}[1][1]{%
+\begin{tikzpicture}[baseline, xscale=#1]
+\draw[black, -{To[angle=90:.3cm 1,length=9mm, flex'=.86]}, line width=4pt] (.1,.85) to [curve through={(.79,.18) .. (1.45,.7) 
+(1.48,.8) .. 
+([blank=soft]1.43,1.4)
+.. (1.2,1.6) .. (.9,1.6) .. (1.9,1.6)}]
+(2.1,2.5);
+\node[circle, minimum width=4pt, fill=black,
+  inner sep=0pt, outer sep=0pt] at (.1,.85) {};
+\end{tikzpicture}}
+\fi
+
 \definecolor{notecolour}{RGB}{68,170,153}
 \newcommand*{\puzzle}{{\fontencoding{U}\fontfamily{fontawesometwo}\selectfont\symbol{225}}}
 %\newcommand*{\puzzle}{\maltese}
@@ -647,6 +665,7 @@ totalheight=\heightof{@}]{atblack.png}}\makeatother
 \newcommand*{\ye}{e}
 \newcommand*{\yC}{C}
 \newcommand*{\yal}{\alpha}
+\newcommand*{\ybe}{\beta}
 \newcommand*{\dextro}{\mathord{\includegraphics[totalheight=\heightof{O}]{dextro.png}}}
 \newcommand*{\laevo}{\mathord{\includegraphics[totalheight=\heightof{O}]{laevo.png}}}
 \newcommand*{\ywp}{\dot{0}}
@@ -1064,6 +1083,29 @@ lengths on the same line or on two parallel lines, two areas on the same
 plane or on two parallel planes, and two volumes. Remember that such sums
 and subtractions do not require the notions of distance or angle.
 
+Flats with inner weight and flats with outer weights differ in an important
+respect with respect to summation. For the first, the weights generally add
+up (with sign); for the second, \emph{the reciprocal of the weights}
+generally add up. Thus, if we add a flat with inner weight to itself, we
+obtain a flat with twice the original weight; if we add a flat with outer
+weight to itself, we obtain a flat with \emph{half} the original weight.
+
+Note that the sum of the reciprocal of two weights -- in particular
+parallel lengths, parallel areas, volumes -- is a well-defined geometric
+construction even in the absence of a notion of distance, because it can be
+computed in term of sums and ratios. For example, if $\yal$ and $\ybe$ are
+parallel areas, their reciprocal sum is defined in terms of ratios as
+\begin{equation}
+  \label{eq:reciprocal_sum}
+  \frac{1}{\frac{1}{\yal}+ \frac{1}{\ybe}} \defd
+  \frac{\ybe}{\yal+\ybe}\yal \equiv
+  \frac{\yal}{\yal+\ybe}\ybe.
+\end{equation}
+In words, we first compute the total area $\yal+\ybe$, then the ratio
+between the area $\ybe$ and this total, and finally we construct the area
+that has this same ratio with the area $\yal$.
+\mynote{Picture}
+
 
 \subsection{Sum of points}
 \label{sec:sum_points}
@@ -1086,6 +1128,16 @@ For the sums of three non-collinear points and four mutually non-coplanar
 points similar constructions exist, with the ratios referring to areas and
 volumes.
 
+\bigskip
+
+The sum of points with inner weight and outer sense proceeds in an
+analogous way, with the understanding that their screw sense behaves like a
+sign, and $\dextro \equiv -\laevo$ as explained in
+\sect~\ref{sec:summary_kinds_objects}.
+
+\bigskip
+
+The sum of points with outer weight and inner sense
 
 \section{Products}
 \label{sec:products}
@@ -1257,6 +1309,7 @@ multiplication of signs:
     \text{inner}\we\text{outer}&=\text{inner}
   \end{aligned}
 \end{equation}
+
 
 
 
@@ -1958,6 +2011,9 @@ achieved by the sum of such geometric entities in the \gm\ space.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \iffalse
 \begin{acknowledgements}
+  \mynote{add acknowledgement to
+    \url{https://tex.stackexchange.com/a/474642/97039}}
+  
   PGLPM thanks Mari \amp\ Miri for continuous encouragement and affection,
   Buster Keaton and Saitama for filling life with awe and inspiration, and
   the developers and maintainers of \LaTeX, Emacs, AUC\TeX, Open Science
