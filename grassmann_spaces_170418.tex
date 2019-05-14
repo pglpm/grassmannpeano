@@ -1,7 +1,7 @@
 \pdfoutput=1
 %% Author: PGL  Porta Mana
 %% Created: 2015-05-01T20:53:34+0200
-%% Last-Updated: 2019-02-28T13:39:20+0100
+%% Last-Updated: 2019-02-28T16:09:21+0100
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifarxiv
 \arxivfalse
@@ -1350,26 +1350,28 @@ multiplication of signs:
 This is the table for the meet, join, and contraction:
 
 {\centering
-  \begin{tabular}{c|cccc|cccc}
-    $\zb\ve$ $\zr\we$ $\cdot$&$0$&$1$&$2$&$3$ 
+  \begin{tabular}{c|ccccccccc}
+    $\zb\ve$ $\zr\we$ $\cdot$&$\ywv$&$0$&$1$&$2$&$3$ 
 & $\ywp$&$\ywl$&$\ywa$&$\ywv$  \\
     \midrule
-$0$& &&$\ywv$&$0$
+ $\ywv$&&&&&$\ywv$
+&$0$&$1$&$2$&$3$ \\
+$0$&& &&$\ywv$&$0$
 &$\zb1$&$\zb2$&$3$&$\ywp$ \\
-$1$&&$\ywv$&$\zr0$&$1$ 
+$1$&&&$\ywv$&$\zr0$&$1$ 
 &$\zb2$&$3$&$\zr\ywp$&$\ywl$ \\
-$2$&$\ywv$&$\zr0$&$\zr1$&$2$ 
+$2$&&$\ywv$&$\zr0$&$\zr1$&$2$ 
 &$3$&$\zr\ywp$&$\zr\ywl$&$\ywa$ \\
- $3$&$0$&$1$&$2$&$3$ 
+ $3$&$\ywv$&$0$&$1$&$2$&$3$ 
 &$\ywp$&$\ywl$&$\ywa$&$\ywv$ \\
 %    
- $\ywp$&$\zb1$&$\zb2$&$3$&$\ywp$
+ $\ywp$&$0$&$\zb1$&$\zb2$&$3$&$\ywp$
 &$\zb\ywl$&$\zb\ywa$&$\ywv$&\\
- $\ywl$&$\zb2$&$3$&$\zr\ywp$&$\ywl$
+ $\ywl$&$1$&$\zb2$&$3$&$\zr\ywp$&$\ywl$
 &$\zb\ywa$&$\ywv$&&\\
- $\ywa$&$3$&$\zr\ywp$&$\zr\ywl$&$\ywa$
+ $\ywa$&$2$&$3$&$\zr\ywp$&$\zr\ywl$&$\ywa$
 &$\ywv$&&&\\
- $\ywv$&$\ywp$ &$\ywl$&$\ywa$&$\ywv$
+ $\ywv$&$3$&$\ywp$ &$\ywl$&$\ywa$&$\ywv$
 &&&&
   \end{tabular}
 
@@ -1378,18 +1380,63 @@ empty entries being zero.
 
 \bigskip
 
+test table
 
-\bigskip\mynote{The question whether we can  replace the zero entries of the first
-  two tables pivots around this problem:
+{\centering
+  \begin{tabular}{c|ccccccccc}
+    $\zb\ve$ $\zr\we$ $\cdot$&$\ywv$&$0$&$1$&$2$&$3$ 
+    & $\ywp$&$\ywl$&$\ywa$&$\ywv$  \\
+    \midrule
+    $\ywv$&&&&&$\ywv$
+                                            &$\zb0$&$\zb1$&$\zb2$&$3$ \\
+    $0$&& &&$\zr\ywv$&$0$
+                                            &$\zb1$&$\zb2$&$3$&$\zr\ywp$ \\
+    $1$&&&$\zr\ywv$&$\zr0$&$1$ 
+                                                &$\zb2$&$3$&$\zr\ywp$&$\zr\ywl$ \\
+    $2$&&$\zr\ywv$&$\zr0$&$\zr1$&$2$ 
+                                                &$3$&$\zr\ywp$&$\zr\ywl$&$\zr\ywa$ \\
+    $3$&$\ywv$&$0$&$1$&$2$&$3$ 
+    &$\ywp$&$\ywl$&$\ywa$&$\ywv$ \\
+%    
+    $\ywp$&$\zb0$&$\zb1$&$\zb2$&$3$&$\ywp$
+    &$\zb\ywl$&$\zb\ywa$&$\zb\ywv$&\\
+    $\ywl$&$\zb1$&$\zb2$&$3$&$\zr\ywp$&$\ywl$
+    &$\zb\ywa$&$\zb\ywv$&&\\
+    $\ywa$&$\zb2$&$3$&$\zr\ywp$&$\zr\ywl$&$\ywa$
+    &$\zb\ywv$&&&\\
+    $\ywv$&$3$&$\zr\ywp$ &$\zr\ywl$&$\zr\ywa$&$\ywv$
+    &&&&
+  \end{tabular}
+
+} empty entries being zero.
+
+\bigskip
+
+
+\bigskip\mynote{The question whether we can replace the zero entries of the
+  first two tables pivots around this problem:
 
   Consider five points with inner weight: $A_1,\dotsc,A_5$. The fact that
   all of them lie in the same space can be expressed with the progressive
   product as $A_1 \ve\dotsb\ve A_5 = 0$. The regressive product of the
   space $A_1 \ve\dotsb\ve A_4$ and the point $A_5$ is instead non-zero:
-  $(A_1 \ve\dotsb\ve A_4) \we A_5 \ne 0$. There is no way to make allowance for
-  both these statements with one product only, even if non-associative.}
+  $(A_1 \ve\dotsb\ve A_4) \we A_5 \ne 0$. There is no way to make allowance
+  for both these statements with one product only, even if
+  non-associative.}
 
 \clearpage
+
+\mynote{flats with inner weight must \enquote{behave in a reciprocal way}:
+  seen from limit forms of sum with themselves.}
+
+\mynote{Contraction cannot be considered as a sort of division, because
+  multiplication by scalar in numerator or denominator would lead to wrong
+  multiple}
+
+
+
+\clearpage
+
 \hrule
 OLD TEXT
 \hrule
